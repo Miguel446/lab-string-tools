@@ -1,0 +1,4 @@
+<div class="routing-chips">
+    <app-chip *ngFor="let routingChip of routingChips; index as i;" [label]="routingChip.label"
+        [toggle]="routingChip.toggle" (click)=navigate(routingChip.route,i)></app-chip>
+</div>
