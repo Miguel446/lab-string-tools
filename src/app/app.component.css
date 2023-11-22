@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #11284D;
+    height: 96px;
+}
+
+.content {
+    background-color: #1C1C1C;
+}
+
+.padding {
+    padding-left: 76px;
+    padding-right: 76px;
+}
