@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class ReplaceTextComponent {
 
+  handleTextOutput(text: string) {
+    console.log("Event: " + text);
+  }
+
+  replaceText() {
+    // TODO
+  }
+
 }

@@ -1,2 +1,2 @@
 <p class="feature-title mb-16">Substituir texto</p>
-<app-text-area [options]="['clear','copy']"></app-text-area>
+<app-text-area [options]="['clear','copy']" (textOutput)="handleTextOutput($event)"></app-text-area>
