@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-text-area',
@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrl: './text-area.component.css'
 })
 export class TextAreaComponent {
+
+  @Input()
+  options: string[] = [];
+
+  text: string = "";
+
+  clear() {
+    this.text = "";
+  }
+
+  copy() {
+    navigator.clipboard.writeText(this.text).then(
+      function () {
+        // success 
+      })
+      .catch(
+        function () {
+          // error
+        });
+  }
 
 }

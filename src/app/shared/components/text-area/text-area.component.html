@@ -1,1 +1,11 @@
-<p>text-area works!</p>
+<div class="row">
+    <p class="textarea-label">Insira o conteúdo</p>
+    <div class="row icons">
+        <img *ngIf="this.options.includes('clear')" (click)="clear()" src="./../../../../assets/icons/delete.svg"
+            alt="Limpar" />
+        <img *ngIf="this.options.includes('copy')" (click)="copy()" src="./../../../../assets/icons/copy.svg"
+            alt="Copiar" />
+    </div>
+</div>
+<textarea class="text-area" rows="20" [(ngModel)]="text"></textarea>
+<p class="textarea-label footer">Tamanho: {{text.length}}</p>

@@ -1,0 +1,33 @@
+.text-area {
+    border-radius: 16px;
+    background-color: #252525;
+    color: #FFFFFF;
+    padding: 10px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.textarea-label {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.footer {
+    text-align: right;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.icons {
+    img {
+        margin-right: 20px;
+    }
+
+    img:last-child {
+        margin-right: 0px;
+    }
+}
