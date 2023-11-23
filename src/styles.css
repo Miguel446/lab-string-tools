@@ -15,6 +15,10 @@ body {
     margin-top: 32px;
 }
 
+.mb-16 {
+    margin-bottom: 16px;
+}
+
 .mb-48 {
     margin-bottom: 48px;
 }
