@@ -1,4 +1,4 @@
-export interface RoutingChip {
+export type RoutingChip = {
 
     label: string;
     route: string;
