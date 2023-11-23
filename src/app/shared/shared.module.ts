@@ -5,6 +5,7 @@ import { TextAreaComponent } from './components/text-area/text-area.component';
 import { InputComponent } from './components/input/input.component';
 import { ChipComponent } from './components/chip/chip.component';
 import { RoutingChipsComponent } from './components/routing-chips/routing-chips.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,7 +15,7 @@ import { RoutingChipsComponent } from './components/routing-chips/routing-chips.
     TextAreaComponent,
     InputComponent,
     ChipComponent,
-    RoutingChipsComponent
+    RoutingChipsComponent,
   ],
   exports: [
     PrimaryButtonComponent,
@@ -24,7 +25,8 @@ import { RoutingChipsComponent } from './components/routing-chips/routing-chips.
     RoutingChipsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class SharedModule { }
