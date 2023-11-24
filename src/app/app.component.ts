@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
 
   currentIndex: number = 0;
 
-  routingChips: RoutingChip[] = [{ "label": "Substituir texto", "route": "replace-text", "toggle": false }, { "label": "Base64 Encoder", "route": "base64-encoder", "toggle": false },
+  routingChips: RoutingChip[] = [{ "label": "Substituir texto", "route": "replace-text", "toggle": false }, { "label": "Remover linhas", "route": "remove-line", "toggle": false }, { "label": "Base64 Encoder", "route": "base64-encoder", "toggle": false },
   { "label": "Base64 Decoder", "route": "base64-decoder", "toggle": false }];
 
   ngOnInit(): void {
