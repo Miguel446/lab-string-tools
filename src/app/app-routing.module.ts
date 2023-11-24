@@ -7,7 +7,9 @@ const routes: Routes = [
     path: '',
     redirectTo: 'replace-text',
     pathMatch: 'full'
-  }
+  },
+  { path: 'base64-encoder', loadChildren: () => import('./features/base64-encoder/base64-encoder.module').then(m => m.Base64EncoderModule) },
+  { path: 'base64-decoder', loadChildren: () => import('./features/base64-decoder/base64-decoder.module').then(m => m.Base64DecoderModule) }
 ];
 
 @NgModule({
