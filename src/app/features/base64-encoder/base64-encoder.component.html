@@ -1,1 +1,8 @@
-<p>base64-encoder works!</p>
+<p class="feature-title mb-16">Base64 Encoder</p>
+<app-text-area [label]="'Insira o conteúdo'" [options]="['clear','copy']"
+    (textAreaListener)="setInputText($event)"></app-text-area>
+<div class="mt-32"></div>
+<app-text-area [label]="'Resultado'" [options]="['copy']" [isReadOnly]="true" [text]="result"></app-text-area>
+<div class="button-footer">
+    <app-primary-button (click)="copy()" [label]="'Copiar para área de transferência'"></app-primary-button>
+</div>
