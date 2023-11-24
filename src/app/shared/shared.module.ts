@@ -4,7 +4,7 @@ import { PrimaryButtonComponent } from './components/primary-button/primary-butt
 import { TextAreaComponent } from './components/text-area/text-area.component';
 import { InputComponent } from './components/input/input.component';
 import { ChipComponent } from './components/chip/chip.component';
-import { RoutingChipsComponent } from './components/routing-chips/routing-chips.component';
+import { RoutingChipsComponent } from '../core/components/routing-chips/routing-chips.component';
 import { FormsModule } from '@angular/forms';
 
 
@@ -14,15 +14,13 @@ import { FormsModule } from '@angular/forms';
     PrimaryButtonComponent,
     TextAreaComponent,
     InputComponent,
-    ChipComponent,
-    RoutingChipsComponent,
+    ChipComponent
   ],
   exports: [
     PrimaryButtonComponent,
     TextAreaComponent,
     InputComponent,
-    ChipComponent,
-    RoutingChipsComponent
+    ChipComponent
   ],
   imports: [
     CommonModule,

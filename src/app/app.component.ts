@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RoutingChip } from './shared/components/routing-chips/routing-chip.model';
+import { RoutingChip } from './core/components/routing-chips/routing-chip.model';
 
 @Component({
   selector: 'app-root',
