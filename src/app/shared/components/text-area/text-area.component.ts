@@ -14,7 +14,7 @@ export class TextAreaComponent {
   text: string = "";
 
   @Output()
-  textOutput: EventEmitter<string> = new EventEmitter<string>();
+  textAreaListener: EventEmitter<string> = new EventEmitter<string>();
 
   clear() {
     this.text = "";
@@ -32,7 +32,7 @@ export class TextAreaComponent {
   }
 
   onChange() {
-    this.textOutput.emit(this.text);
+    this.textAreaListener.emit(this.text);
   }
 
 }
