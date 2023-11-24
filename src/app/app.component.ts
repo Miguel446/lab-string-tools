@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RoutingChip } from './shared/components/routing-chips/routing-chip.model';
 
 @Component({
@@ -6,11 +6,23 @@ import { RoutingChip } from './shared/components/routing-chips/routing-chip.mode
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'string-tools';
+export class AppComponent implements OnInit {
 
-  routingChips: RoutingChip[] = [{ "label": "Substituir texto", "route": "replace-text", "toggle": true }, { "label": "Substituir texto", "route": "rota2", "toggle": false },
-  { "label": "Substituir texto", "route": "rota3", "toggle": false }, { "label": "Substituir texto", "route": "rota4", "toggle": false },
-  { "label": "Substituir texto", "route": "rota5", "toggle": false }];
+  currentIndex: number = 0;
+
+  routingChips: RoutingChip[] = [{ "label": "Substituir texto", "route": "replace-text", "toggle": false }, { "label": "Base64 Encoder", "route": "base64-encoder", "toggle": false },
+  { "label": "Base64 Decoder", "route": "base64-decoder", "toggle": false }];
+
+  ngOnInit(): void {
+    let currentRoute = location.pathname.replace("/", "");
+    currentRoute = currentRoute ? currentRoute : 'replace-text'; // default route
+
+    for (let i = 0; i < this.routingChips.length; i++) {
+      if (this.routingChips[i].route == currentRoute) {
+        this.currentIndex = i;
+        this.routingChips[i].toggle = true;
+      }
+    }
+  }
 
 }

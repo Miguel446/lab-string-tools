@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { RoutingChip } from './routing-chip.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-routing-chips',
@@ -8,20 +9,23 @@ import { RoutingChip } from './routing-chip.model';
 })
 export class RoutingChipsComponent {
 
+  constructor(private router: Router) { }
+
   @Input()
   routingChips!: RoutingChip[];
 
-  lastIndex: number = 0;
+  @Input()
+  currentIndex: number = 0;
 
-  navigate(route: string, routeIndex: number) {
-    if (this.routingChips[routeIndex].toggle) {
+  navigate(nextRoute: string, nextRouteIndex: number) {
+    if (this.routingChips[nextRouteIndex].toggle) {
       return;
     }
 
-    this.routingChips[this.lastIndex].toggle = false;
-    this.routingChips[routeIndex].toggle = true;
-    this.lastIndex = routeIndex;
+    this.routingChips[this.currentIndex].toggle = false;
+    this.routingChips[nextRouteIndex].toggle = true;
+    this.currentIndex = nextRouteIndex;
 
-    console.log(route + ' ' + routeIndex);
+    this.router.navigate([nextRoute]);
   }
 }
