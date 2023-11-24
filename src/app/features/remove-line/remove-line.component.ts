@@ -14,34 +14,44 @@ export class RemoveLineComponent {
   chipToggle: boolean = false;
 
   inputText: string = '';
-  removeText: string = '';
+  textToRemove: string = '';
 
   result: string = '';
 
   setInputText(inputText: string) {
     this.inputText = inputText;
-    this.removeLines(this.inputText, this.removeText, this.chipToggle);
+    this.removeLines(this.inputText, this.textToRemove, this.chipToggle);
   }
 
-  setRemoveText(removeText: string) {
-    this.removeText = removeText;
-    this.removeLines(this.inputText, this.removeText, this.chipToggle);
+  setTextToRemove(textToRemove: string) {
+    this.textToRemove = textToRemove;
+    this.removeLines(this.inputText, this.textToRemove, this.chipToggle);
   }
 
   clickChip() {
     this.chipToggle = !this.chipToggle;
-    this.chipLabel = this.chipToggle ? '  Contém  ' : 'Não contém';
-    this.removeLines(this.inputText, this.removeText, this.chipToggle);
+    this.chipLabel = this.chipToggle ? 'Contém' : 'Não contém';
+    this.removeLines(this.inputText, this.textToRemove, this.chipToggle);
   }
 
-  removeLines(inputText: string, searchText: string, chipToggle: boolean) {
-    if (!inputText || !searchText || !chipToggle) {
+  removeLines(inputText: string, textToRemove: string, isContaining: boolean) {
+    if (!inputText || !textToRemove) {
       this.result = '';
       return;
     }
 
-    // remove text from lines
+    let lines: string[] = inputText.split("\n");
+    let newLines: string[] = [];
 
+    // O(n²)
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      if ((isContaining && line.includes(textToRemove)) || (!isContaining && !line.includes(textToRemove))) {
+        newLines.push(line);
+      }
+    }
+
+    this.result = newLines.join("\n");
   }
 
   copy() {
