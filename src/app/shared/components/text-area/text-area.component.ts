@@ -13,6 +13,9 @@ export class TextAreaComponent {
   @Input()
   text: string = "";
 
+  @Input()
+  label: string = "";
+
   @Output()
   textAreaListener: EventEmitter<string> = new EventEmitter<string>();
 
