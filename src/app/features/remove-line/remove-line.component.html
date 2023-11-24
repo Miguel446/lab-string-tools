@@ -1,1 +1,11 @@
-<p>remove-line works!</p>
+<p class="feature-title mb-16">Remover linhas</p>
+<app-text-area [label]="'Insira o conteúdo'" [options]="['clear','copy']"
+    (textAreaListener)="setInputText($event)"></app-text-area>
+<div class="remove-line-menu">
+    <app-chip class="chip" [label]="chipLabel" [toggle]="chipToggle" (click)="clickChip()"></app-chip>
+    <app-input class="input-area" (inputListener)="setRemoveText($event)"></app-input>
+</div>
+<app-text-area [label]="'Resultado'" [options]="['copy']" [isReadOnly]="true" [text]="result"></app-text-area>
+<div class="button-footer">
+    <app-primary-button (click)="copy()" [label]="'Copiar para área de transferência'"></app-primary-button>
+</div>

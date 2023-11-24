@@ -1,0 +1,17 @@
+.remove-line-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.chip {
+    margin-right: 24px;
+    width: 120px;
+}
+
+.input-area {
+    flex: 1;
+}
