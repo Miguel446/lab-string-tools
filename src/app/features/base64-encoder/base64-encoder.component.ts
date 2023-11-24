@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigatorService } from '../../core/navigator.service';
+import { NavigatorService } from '../../core/services/navigator.service';
 
 @Component({
   selector: 'app-base64-encoder',

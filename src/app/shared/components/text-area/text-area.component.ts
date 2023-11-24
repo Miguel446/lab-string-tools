@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { NavigatorService } from '../../../core/navigator.service';
+import { NavigatorService } from '../../../core/services/navigator.service';
 
 @Component({
   selector: 'app-text-area',
