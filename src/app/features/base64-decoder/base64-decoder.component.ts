@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigatorService } from '../../core/navigator.service';
 
 @Component({
   selector: 'app-base64-decoder',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrl: './base64-decoder.component.css'
 })
 export class Base64DecoderComponent {
+
+  constructor(private navigatorService: NavigatorService) { }
+
+  result: string = '';
+
+  setInputText($event: string) {
+    // convert base64 to string
+  }
+
+  copy() {
+    this.navigatorService.copy(this.result);
+  }
 
 }

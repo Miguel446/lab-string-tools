@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { Base64DecoderRoutingModule } from './base64-decoder-routing.module';
 import { Base64DecoderComponent } from './base64-decoder.component';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { Base64DecoderComponent } from './base64-decoder.component';
   ],
   imports: [
     CommonModule,
-    Base64DecoderRoutingModule
+    Base64DecoderRoutingModule,
+    SharedModule
   ]
 })
 export class Base64DecoderModule { }
