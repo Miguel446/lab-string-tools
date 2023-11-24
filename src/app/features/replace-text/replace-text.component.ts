@@ -7,8 +7,18 @@ import { Component } from '@angular/core';
 })
 export class ReplaceTextComponent {
 
-  handleTextOutput(text: string) {
+  result: string = '';
+
+  handleUserText(text: string) {
     console.log("Event: " + text);
+  }
+
+  handleReplaceText(replaceText: string) {
+    console.log('Replace: ' + replaceText);
+  }
+
+  handleReplaceWithText(replaceWithText: string) {
+    console.log('Replace With: ' + replaceWithText);
   }
 
   replaceText() {

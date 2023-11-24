@@ -1,2 +1,9 @@
 <p class="feature-title mb-16">Substituir texto</p>
-<app-text-area [options]="['clear','copy']" (textOutput)="handleTextOutput($event)"></app-text-area>
+<app-text-area [options]="['clear','copy']" (textAreaListener)="handleUserText($event)"></app-text-area>
+<div class="replace-menu">
+    <p class="replace">Substituir essa palavra:</p>
+    <app-input class="input-area" (inputListener)="handleReplaceText($event)"></app-input>
+    <p class="with">Por:</p>
+    <app-input class="input-area" (inputListener)="handleReplaceWithText($event)"></app-input>
+</div>
+<app-text-area [options]="['copy']" [text]="result"></app-text-area>
