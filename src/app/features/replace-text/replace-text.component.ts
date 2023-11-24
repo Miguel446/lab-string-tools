@@ -7,22 +7,32 @@ import { Component } from '@angular/core';
 })
 export class ReplaceTextComponent {
 
+  inputText: string = '';
+  searchText: string = '';
+  replaceText: string = '';
   result: string = '';
 
-  handleUserText(text: string) {
-    console.log("Event: " + text);
+  setInputText(inputText: string) {
+    this.inputText = inputText;
+    this.replace(this.inputText, this.searchText, this.replaceText);
   }
 
-  handleReplaceText(replaceText: string) {
-    console.log('Replace: ' + replaceText);
+  setSearchText(searchText: string) {
+    this.searchText = searchText;
+    this.replace(this.inputText, this.searchText, this.replaceText);
   }
 
-  handleReplaceWithText(replaceWithText: string) {
-    console.log('Replace With: ' + replaceWithText);
+  setReplaceText(replaceText: string) {
+    this.replaceText = replaceText
+    this.replace(this.inputText, this.searchText, this.replaceText);
   }
 
-  replaceText() {
-    // TODO
+  replace(inputText: string, searchText: string, replaceText: string) {
+    if (!inputText || !searchText || !replaceText) {
+      this.result = '';
+      return;
+    }
+    this.result = inputText.replaceAll(searchText, replaceText);
   }
 
   copy() {
