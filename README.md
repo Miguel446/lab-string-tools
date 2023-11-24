@@ -1,6 +1,8 @@
-# StringTools
+# String Tools
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+
+String Tools is a personal project to learn some Angular concepts such as Lazy Loading Modules, Communication between parent and child components and Routing
 
 ## Development server
 
