@@ -7,5 +7,6 @@
             alt="Copiar" />
     </div>
 </div>
-<textarea class="text-area" rows="20" [(ngModel)]="text" (ngModelChange)="onChange()"></textarea>
+<textarea [readOnly]="isReadOnly" class="text-area" rows="20" [(ngModel)]="text"
+    (ngModelChange)="onChange()"></textarea>
 <p class="textarea-label footer">Tamanho: {{text.length}}</p>

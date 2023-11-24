@@ -16,6 +16,9 @@ export class TextAreaComponent {
   @Input()
   label: string = "";
 
+  @Input()
+  isReadOnly: boolean = false;
+
   @Output()
   textAreaListener: EventEmitter<string> = new EventEmitter<string>();
 
