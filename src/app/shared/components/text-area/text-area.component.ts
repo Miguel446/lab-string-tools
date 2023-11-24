@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { NavigatorService } from '../../../core/navigator.service';
 
 @Component({
   selector: 'app-text-area',
@@ -6,6 +7,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './text-area.component.css'
 })
 export class TextAreaComponent {
+
+  constructor(private navigatorService: NavigatorService) { }
 
   @Input()
   options: string[] = [];
@@ -27,14 +30,7 @@ export class TextAreaComponent {
   }
 
   copy() {
-    navigator.clipboard.writeText(this.text).then(
-      function () {
-        // success 
-      })
-      .catch(
-        function () {
-          // error
-        });
+    this.navigatorService.copy(this.text);
   }
 
   onChange() {

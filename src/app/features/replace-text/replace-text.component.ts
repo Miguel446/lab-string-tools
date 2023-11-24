@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigatorService } from '../../core/navigator.service';
 
 @Component({
   selector: 'app-replace-text',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './replace-text.component.css'
 })
 export class ReplaceTextComponent {
+
+  constructor(private navigatorService: NavigatorService) { }
 
   inputText: string = '';
   searchText: string = '';
@@ -36,14 +39,7 @@ export class ReplaceTextComponent {
   }
 
   copy() {
-    navigator.clipboard.writeText(this.result).then(
-      function () {
-        // success 
-      })
-      .catch(
-        function () {
-          // error
-        });
+    this.navigatorService.copy(this.result);
   }
 
 }
