@@ -12,8 +12,8 @@ export class Base64DecoderComponent {
 
   result: string = '';
 
-  setInputText($event: string) {
-    // convert base64 to string
+  setInputText(text: string) {
+    this.result = window.atob(text);
   }
 
   copy() {

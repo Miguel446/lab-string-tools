@@ -12,8 +12,8 @@ export class Base64EncoderComponent {
 
   result: string = '';
 
-  setInputText($event: string) {
-    // convert to base64
+  setInputText(text: string) {
+    this.result = window.btoa(text);
   }
 
   copy() {
