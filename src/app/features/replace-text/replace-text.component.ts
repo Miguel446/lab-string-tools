@@ -25,4 +25,15 @@ export class ReplaceTextComponent {
     // TODO
   }
 
+  copy() {
+    navigator.clipboard.writeText(this.result).then(
+      function () {
+        // success 
+      })
+      .catch(
+        function () {
+          // error
+        });
+  }
+
 }

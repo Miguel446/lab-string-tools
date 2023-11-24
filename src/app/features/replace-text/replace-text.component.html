@@ -8,3 +8,6 @@
     <app-input class="input-area" (inputListener)="handleReplaceWithText($event)"></app-input>
 </div>
 <app-text-area [label]="'Resultado'" [options]="['copy']" [isReadOnly]="true" [text]="result"></app-text-area>
+<div class="button-footer">
+    <app-primary-button (click)="copy()" [label]="'Copiar para área de transferência'"></app-primary-button>
+</div>
