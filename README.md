@@ -4,6 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 String Tools is a personal project to learn some Angular concepts such as Lazy Loading Modules, Communication between parent and child components and Routing
 
+Main Features:
+- Replace Text
+- Encode Base64
+- Decode Base64  
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
