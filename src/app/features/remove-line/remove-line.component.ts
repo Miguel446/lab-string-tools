@@ -30,7 +30,7 @@ export class RemoveLineComponent {
 
   clickChip() {
     this.chipToggle = !this.chipToggle;
-    this.chipLabel = this.chipToggle ? 'Contendo' : 'Não contém';
+    this.chipLabel = this.chipToggle ? 'Contendo' : 'Não contendo';
     this.removeLines(this.inputText, this.textToRemove, this.chipToggle);
   }
 
