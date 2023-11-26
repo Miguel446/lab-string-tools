@@ -10,7 +10,7 @@ export class RemoveLineComponent {
 
   constructor(private navigatorService: NavigatorService) { }
 
-  chipLabel: string = 'Não contém';
+  chipLabel: string = 'Não contendo';
   chipToggle: boolean = false;
 
   inputText: string = '';
@@ -30,7 +30,7 @@ export class RemoveLineComponent {
 
   clickChip() {
     this.chipToggle = !this.chipToggle;
-    this.chipLabel = this.chipToggle ? 'Contém' : 'Não contém';
+    this.chipLabel = this.chipToggle ? 'Contendo' : 'Não contém';
     this.removeLines(this.inputText, this.textToRemove, this.chipToggle);
   }
 
