@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, tick } from '@angular/core/testing';
 
 import { NavigatorService } from './navigator.service';
 
@@ -12,5 +12,12 @@ describe('NavigatorService', () => {
 
   it('should be created', () => {
     expect(service).toBeTruthy();
+  });
+
+  it('should call copy()', () => {
+    let spy = spyOn(service, 'copy');
+    service.copy('test');
+
+    expect(spy).toHaveBeenCalled();
   });
 });

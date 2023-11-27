@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InputComponent } from './input.component';
+import { FormsModule } from '@angular/forms';
 
 describe('InputComponent', () => {
   let component: InputComponent;
@@ -8,10 +9,11 @@ describe('InputComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [FormsModule],
       declarations: [InputComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(InputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -19,5 +21,11 @@ describe('InputComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should call onChange()', () => {
+    let spy = spyOn(component, 'onChange');
+    component.onChange();
+    expect(spy).toHaveBeenCalled();
   });
 });
