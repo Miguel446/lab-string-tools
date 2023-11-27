@@ -4,10 +4,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 String Tools is a personal project to learn some Angular concepts such as Lazy Loading Modules, Communication between parent and child components and Routing
 
-Main Features:
+Features:
 - Replace Text
+- Remove Lines
 - Encode Base64
 - Decode Base64  
+
+It's available as an Azure App Service on https://stringtools.azurewebsites.net/
 
 ## Development server
 
