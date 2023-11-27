@@ -46,7 +46,7 @@ export class RemoveLineComponent {
     // O(n²)
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      if ((isContaining && line.includes(textToRemove)) || (!isContaining && !line.includes(textToRemove))) {
+      if ((isContaining && !line.includes(textToRemove)) || (!isContaining && line.includes(textToRemove))) {
         newLines.push(line);
       }
     }
