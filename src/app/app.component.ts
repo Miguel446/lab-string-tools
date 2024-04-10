@@ -11,11 +11,11 @@ export class AppComponent implements OnInit {
   currentIndex: number = 0;
 
   routingChips: RoutingChip[] = [{ "label": "Substituir texto", "route": "replace-text", "toggle": false }, { "label": "Remover linhas", "route": "remove-line", "toggle": false }, { "label": "Base64 Encoder", "route": "base64-encoder", "toggle": false },
-  { "label": "Base64 Decoder", "route": "base64-decoder", "toggle": false }];
+  { "label": "Base64 Decoder", "route": "base64-decoder", "toggle": false }, { "label": "Formatar JSON", "route": "json-formatter", "toggle": false }];
 
   ngOnInit(): void {
     let currentRoute = location.pathname.replace("/", "");
-    currentRoute = currentRoute ? currentRoute : 'replace-text'; // default route
+    currentRoute = currentRoute || 'replace-text'; // default route
 
     for (let i = 0; i < this.routingChips.length; i++) {
       if (this.routingChips[i].route == currentRoute) {
