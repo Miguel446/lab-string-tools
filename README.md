@@ -12,6 +12,8 @@ Features:
 
 It's available as an Azure App Service on https://stringtools.azurewebsites.net/
 
+<sup><sub>* Projects with the prefix 'lab' are developed with the aim of being an environment to experiment and learn new technologies in practice</sub></sup>
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
