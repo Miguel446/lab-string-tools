@@ -17,7 +17,7 @@ export class JsonFormatterComponent {
       }
       this.result = JSON.stringify(JSON.parse(jsonrepair(text)), null, 2);
     } catch (err) {
-      this.result = 'Error';
+      this.result = !text ? '' : 'Error';
     }
   }
 

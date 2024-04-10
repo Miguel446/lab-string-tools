@@ -1,8 +1,8 @@
 <p class="feature-title mb-16">Formatar JSON</p>
-<div class="row">
-    <app-text-area class="flex" [label]="'Insira o conteúdo'" [options]="['clear','copy']" [rows]="40"
+<div class="input-row">
+    <app-text-area class="fg-1" [label]="'Insira o conteúdo'" [options]="['clear','copy']" [rows]="40"
         (textAreaListener)="setInputText($event)"></app-text-area>
     <div style="width: 38px;"></div>
-    <app-text-area class="flex" [label]="'Resultado'" [options]="['clear','copy']" [rows]="40"
+    <app-text-area class="fg-2" [label]="'Resultado'" [options]="['clear','copy']" [rows]="40" [isReadOnly]="true"
         [text]="result"></app-text-area>
 </div>
