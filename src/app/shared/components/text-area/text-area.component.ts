@@ -20,6 +20,9 @@ export class TextAreaComponent {
   label: string = "";
 
   @Input()
+  rows: number = 20;
+
+  @Input()
   isReadOnly: boolean = false;
 
   @Output()
