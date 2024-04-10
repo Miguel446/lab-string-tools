@@ -1,10 +1,10 @@
 <div class="row">
     <p class="textarea-label">{{label}}</p>
     <div class="row icons">
-        <img *ngIf="this.options.includes('clear')" (click)="clear()" src="./../../../../assets/icons/delete.svg"
-            alt="Limpar" />
-        <img *ngIf="this.options.includes('copy')" (click)="copy()" src="./../../../../assets/icons/copy.svg"
-            alt="Copiar" />
+        <img title="Limpar" *ngIf="this.options.includes('clear')" (click)="clear()"
+            src="./../../../../assets/icons/delete.svg" alt="Limpar" />
+        <img title="Copiar" *ngIf="this.options.includes('copy')" (click)="copy()"
+            src="./../../../../assets/icons/copy.svg" alt="Copiar" />
     </div>
 </div>
 <textarea [readOnly]="isReadOnly" class="text-area" [rows]="rows" [(ngModel)]="text"
